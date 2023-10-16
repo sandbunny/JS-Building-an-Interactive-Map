@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +12,28 @@
             background-color: #ccc;
         }
     </style>
-    </head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="./app.js" defer></script>
+</head>
+
 <body>
+    <form>
+        <select id="business">
+          <option value="restaurant">Restaurants</option>
+          <option value="coffee">Coffee Shops</option>
+          <option value="hotel">Hotels</option>
+          <option value="market">Markets</option>
+        </select>
+        <button id="submit">Submit</button>
+      </form>
     <div id="map"></div>
 </body>
+
 </html>
+
 
 <!-- Note: You do NOT need to create an external JS file for this project despite any instructions you may see in Canvas. The file app.js that's included in the starter code is the only external JS file you need. -->
